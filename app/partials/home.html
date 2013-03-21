@@ -1,26 +1,49 @@
-      <div class="container-narrow">
-      <div class="masthead">
-        <ul class="nav nav-pills pull-right">
-          <li class="active"><a href="#">Home</a></li>
-          <li><a href="#">About</a></li>
-          <li><a href="#">Contact</a></li>
+
+
+  <div class="container-narrow">
+    <div class="masthead">
+      <ul class="nav nav-pills pull-right">
+        <li class="active"><a href="#">Home</a></li>
+        <li><a href="#/about">About</a></li>
+        <li><a href="#/contact">Contact</a></li>
+      </ul>
+      <h3 class="muted">Clogged</h3>
+    </div>
+
+    <hr>
+    <!-- MAIN CONTENT -->
+
+    <div class="jumbotron">
+      <!--Sidebar content-->
+      <h2>Project :: Clogged</h2>
+      <hr>
+      Search: <input ng-model="query">
+      Sort by:
+      <select ng-model="orderProp">
+        <option value="name">Alphabetical</option>
+        <option value="age">Newest</option>
+      </select>
+
+    <hr>
+
+    <p class="lead">Are you looking for a station around you? Need a good one urgently?</p>
+    <a class="btn btn-large btn-success" href="#">Click here for nearby stations</a>
+
+
+    </div>
+
+        <ul class="phones">
+          <li ng-repeat="phone in phones | filter:query ">
+            {{phone.name}}
+            <p>{{phone.snippet}}</p>
+          </li>
         </ul>
-        <h3 class="muted">Clogged</h3>
-      </div>
 
       <hr>
 
-      <div class="jumbotron">
-        <h2>Project :: Clogged</h2>
-        <p class="lead">Are you looking for a station around you? Need a good one urgently?</p>
-        <a class="btn btn-large btn-success" href="#">Click here for nearby stations</a>
-      </div> <!-- /jumbotron -->
-
-      <hr>
-
-
+    <!-- /MAIN CONTENT -->
       <div class="footer">
         <p>&copy; Clogged 2013</p>
       </div>
 
-    </div> <!-- /container -->
+  </div>
