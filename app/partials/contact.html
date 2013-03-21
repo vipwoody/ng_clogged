@@ -30,7 +30,7 @@
     		<th>State</th>
     		<th>Location</th>
     	</tr>
-		<tr ng-repeat="city in cities | limitTo:20">
+		<tr ng-repeat="city in cities | orderBy:ordered:true | limitTo:size">
 			<td>
 				{{city.name}}
 			</td>
