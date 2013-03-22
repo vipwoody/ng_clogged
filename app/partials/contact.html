@@ -1,4 +1,4 @@
-
+<script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
   <div class="container-narrow">
     <div class="masthead">
       <ul class="nav nav-pills pull-right">
@@ -29,26 +29,20 @@
     		<th>Population</th>
     		<th>State</th>
     		<th>Location</th>
+    		<th>ID</th>
     	</tr>
-		<tr ng-repeat="city in cities | orderBy:ordered:true | limitTo:size">
-			<td>
-				{{city.name}}
-			</td>
-			<td>
-				{{city.pop}}
-			</td>
-			<td>
-				{{city.state}}
-			</td>
-			<td>
-				{{city.loc}}
-			</td>						
+		<tr ng-repeat="city in cities | orderBy:ordered:true | limitTo:size | filter:query" >
+			<td>{{city.name}}</td>
+			<td>{{city.pop}}</td>
+			<td>{{city.state}}</td>
+			<td>{{city.loc}}</td>
+			<td>{{city._id}}</td>							
 		</tr>
 	</table>
 
     <hr>
-  
 
+    
 
 
     <!-- /MAIN CONTENT -->

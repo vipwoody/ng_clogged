@@ -24,7 +24,7 @@ function CityListCtrl($scope, $http){
 		$scope.cities = data;
 
 	});
-	$scope.size = 20;
+	$scope.size = 30;
 	$scope.ordered = 'pop';
 
 }
